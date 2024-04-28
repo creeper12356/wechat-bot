@@ -72,7 +72,7 @@ async function onMessage (msg: Message) {
 async function handleRepoUpdate(signal: string) {
   log.info('Remote repository branch master detected')
   const room = await bot.Room.find({topic: ROOM_NAME})
-  await room?.say(execSyncHelper('git log'))
+  await room?.say('后端master分支已经更新😀')
 }
 
 
