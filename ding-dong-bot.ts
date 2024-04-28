@@ -21,6 +21,7 @@ import qrcodeTerminal from 'qrcode-terminal'
 // 配置项
 const ROOM_NAME = 'test'
 const BOT_NAME = 'SmallCre'
+const CURRENT_WORKING_DIR = '..'
 
 function onScan (qrcode: string, status: ScanStatus) {
   if (status === ScanStatus.Waiting || status === ScanStatus.Timeout) {
@@ -51,7 +52,7 @@ function execSyncHelper(command: string) {
       // 防止误删
       throw 'You cannot remove the system'
     }
-    reply = execSync(command).toString()
+    reply = execSync(command, {cwd: CURRENT_WORKING_DIR}).toString()
   } catch(e) {
     reply = e.toString()
   }
