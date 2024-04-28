@@ -64,7 +64,7 @@ async function onMessage (msg: Message) {
   if(await msg.mentionSelf() && !msg.self()) {
     // 执行shell脚本
     reply = execSyncHelper(msg.text())
-    msg.say(reply)
+    msg.say(reply == '' ? '<消息为空>': reply)
   }
 }
 
