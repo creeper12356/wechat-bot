@@ -19,8 +19,8 @@ import {
 
 import qrcodeTerminal from 'qrcode-terminal'
 // 配置项
-const ROOM_NAME = 'test'
-const BOT_NAME = 'SmallCre'
+const ROOM_NAME = '早八凑不齐一个人小组'
+const BOT_NAME = '../ISE-AI-assistant-Backend/'
 const CURRENT_WORKING_DIR = '..'
 
 function onScan (qrcode: string, status: ScanStatus) {
