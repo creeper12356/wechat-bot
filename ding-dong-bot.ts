@@ -20,8 +20,8 @@ import {
 import qrcodeTerminal from 'qrcode-terminal'
 // 配置项
 const ROOM_NAME = '早八凑不齐一个人小组'
-const BOT_NAME = '../ISE-AI-assistant-Backend/'
-const CURRENT_WORKING_DIR = '..'
+const BOT_NAME = 'SmallCre'
+const CURRENT_WORKING_DIR = '../ISE-AI-assistant-Backend/'
 
 function onScan (qrcode: string, status: ScanStatus) {
   if (status === ScanStatus.Waiting || status === ScanStatus.Timeout) {
