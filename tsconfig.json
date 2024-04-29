@@ -1,7 +1,9 @@
 {
   "extends": "@chatie/tsconfig",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "module": "ESNext",
+    "ignoreDeprecations": "5.0",
   },
   "exclude": [
     "node_modules/",
@@ -9,6 +11,7 @@
     "tests/fixtures/"
   ],
   "include": [
+    "*.ts",
     "examples/*.ts",
     "scripts/**/*.ts",
     "src/**/*.ts",
